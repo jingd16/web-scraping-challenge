@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hot Finds</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission To Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Craigslist Listings -->
+    <div class="row" id="mars-listings">
+      <div class="col-md-12">
+        <h1>Latest Mars News</h1>
+        <h4 class="heading">{{listings.Nasa_News_Title}}</h4>
+        <small>{{listings.Nasa_News_Para}}</small>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
