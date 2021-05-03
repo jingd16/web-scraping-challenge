@@ -31,37 +31,38 @@
         <h1>JPG Mars Featured Image</h1>
         <img src={{listings.Featured_Image}} alt="featured_img" style = "width:70%; height:70%">
       </div>
-
       <div class="col-md-4">
         <h1>Mars Information</h1>
-        {{listings.Mars_Information}}
-      </div>
-
-    </div>
-    
-    <h1>Mars Images</h1>
-    
-    <div class="row" id="mars-listings3_1"></div>
-      <div class="col-md-6">
-        <p>{{listings.Mars_Img_Url[0]["title"]}}</p>
-        <img src = {{listings.Mars_Img_Url[0]["img_url"]}} style = "width: 300px; height: 300px; float:left" >
-      </div>
-
-      <div class="col-md-6">
-        <p>{{listings.Mars_Img_Url[1]["title"]}}</p>
-        <img src = {{listings.Mars_Img_Url[1]["img_url"]}} style = "width: 300px; height: 300px; float: left" >
+        <div>{{listings.Mars_Information}}</div>
       </div>
     </div>
+    
+    <div>
+      <h1>Mars Images</h1>
+    
+      <div class="row" id="mars-listings3_1"></div>
+        <div class="col-md-6">
+          <p>{{listings.Mars_Img_Url[0]["title"]}}</p>
+          <img src = {{listings.Mars_Img_Url[0]["img_url"]}} style = "width: 300px; height: 300px; float:left" >
+        </div>
 
-    <div class="row" id="mars-listings3_2"></div>
-      <div class="col-md-6">
-        <p>{{listings.Mars_Img_Url[2]["title"]}}</p>
-        <img src = {{listings.Mars_Img_Url[2]["img_url"]}} style = "width: 300px; height: 300px; float:left" >
+        <div class="col-md-6">
+          <p>{{listings.Mars_Img_Url[1]["title"]}}</p>
+          <img src = {{listings.Mars_Img_Url[1]["img_url"]}} style = "width: 300px; height: 300px; float: left" >
+        </div>
       </div>
+      <br>
+      <br>
+      <div class="row" id="mars-listings3_2"></div>
+        <div class="col-md-6">
+          <p>{{listings.Mars_Img_Url[2]["title"]}}</p>
+          <img src = {{listings.Mars_Img_Url[2]["img_url"]}} style = "width: 300px; height: 300px; float:left" >
+        </div>
       
-      <div class="col-md-6">
-        <p>{{listings.Mars_Img_Url[3]["title"]}}</p>
-        <img src = {{listings.Mars_Img_Url[3]["img_url"]}} style = "width: 300px; height: 300px; float: left" >
+        <div class="col-md-6">
+          <p>{{listings.Mars_Img_Url[3]["title"]}}</p>
+          <img src = {{listings.Mars_Img_Url[3]["img_url"]}} style = "width: 300px; height: 300px; float: left" >
+        </div>
       </div>
     </div>
 

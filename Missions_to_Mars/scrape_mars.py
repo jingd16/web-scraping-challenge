@@ -67,7 +67,7 @@ def scrape():
 
     #=========Result to put into dictionary: html_table
     html_table = mars_df.to_html()
-    html_table.replace("\n", "")
+    html_table1 = html_table.replace("\n", "")
 
     browser.quit()
 
@@ -117,7 +117,7 @@ def scrape():
     listings["Nasa_News_Title"] = nasa_title
     listings["Nasa_News_Para"] = para
     listings["Featured_Image"] = feature_img_url
-    listings["Mars_Information"]=html_table
+    listings["Mars_Information"] = html_table1
     listings["Mars_Img_Url"]=hemisphere_image_urls
 
     return listings
