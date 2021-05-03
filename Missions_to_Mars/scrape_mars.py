@@ -47,7 +47,7 @@ def scrape():
     url_1= url.split("index.html")[0]
     
     #********Result to put into Dictionary: img_url
-    img_url = url_1 + img
+    feature_img_url = url_1 + img
 
     browser.quit()
 
@@ -107,7 +107,7 @@ def scrape():
 
     #add title and img_url to a list of dictionary
     hemisphere_image_urls=[]
-    for x in range(0,3):
+    for x in range(0,4):
         hemisphere_image_urls.append({"title": title[x], "img_url": img_url[x]})
 
     browser.quit()
@@ -116,7 +116,7 @@ def scrape():
     listings={}
     listings["Nasa_News_Title"] = nasa_title
     listings["Nasa_News_Para"] = para
-    listings["Featured_Image"] = img_url
+    listings["Featured_Image"] = feature_img_url
     listings["Mars_Information"]=html_table
     listings["Mars_Img_Url"]=hemisphere_image_urls
 
