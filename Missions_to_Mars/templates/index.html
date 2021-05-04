@@ -26,9 +26,12 @@
       </div> 
     </div>
 
+    <!-- if statement add in order to avoid error: 'jinja2.exceptions.UndefinedError: 'None' has no attribute x' when running this page for the first time -->
+    {% if listings.Featured_Image %} 
     <div class="row" id="mars-listings2">
       <div class="col-md-8">
         <h1>JPG Mars Featured Image</h1>
+        
         <img src={{listings.Featured_Image}} alt="featured_img" style = "width:70%; height:70%">
       </div>
       <div class="col-md-4">
@@ -36,33 +39,44 @@
         <div>{{listings.Mars_Information|safe}}</div>
       </div>
     </div>
+    {% endif %}
 
     <div>
       <h1>Mars Images</h1>
-    
+      
       <div class="row" id="mars-listings3_1"></div>
+        <!-- if statement add in order to avoid error: 'jinja2.exceptions.UndefinedError: 'None' has no attribute x' when running this page for the first time -->
+        {% if listings.Mars_Img_Url %}
         <div class="col-md-6">
           <p>{{listings.Mars_Img_Url[0]["title"]}}</p>
           <img src = {{listings.Mars_Img_Url[0]["img_url"]}} style = "width: 300px; height: 300px; float:left" >
         </div>
+        {% endif %}
 
+        {% if listings.Mars_Img_Url %}
         <div class="col-md-6">
           <p>{{listings.Mars_Img_Url[1]["title"]}}</p>
           <img src = {{listings.Mars_Img_Url[1]["img_url"]}} style = "width: 300px; height: 300px; float: left" >
         </div>
+        {% endif %}
       </div>
       <br>
       <br>
       <div class="row" id="mars-listings3_2"></div>
+        {% if listings.Mars_Img_Url %}
         <div class="col-md-6">
           <p>{{listings.Mars_Img_Url[2]["title"]}}</p>
           <img src = {{listings.Mars_Img_Url[2]["img_url"]}} style = "width: 300px; height: 300px; float:left" >
         </div>
-      
+        {% endif %}
+
+        {% if listings.Mars_Img_Url %}
         <div class="col-md-6">
           <p>{{listings.Mars_Img_Url[3]["title"]}}</p>
           <img src = {{listings.Mars_Img_Url[3]["img_url"]}} style = "width: 300px; height: 300px; float: left" >
         </div>
+        {% endif %}
+
       </div>
     </div>
 
